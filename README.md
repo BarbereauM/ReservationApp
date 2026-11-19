@@ -13,7 +13,6 @@ sardsql (id, mdp)
 MCD:
 <img width="1150" height="908" alt="image" src="https://github.com/user-attachments/assets/813373ad-a142-40cf-99ff-f45069bb06ee" />
 
-[README-suivi.md](https://github.com/user-attachments/files/35077432/README-suivi.md)
 # 🏅 Centre sportif — Système de réservation
 
 > Application web Symfony permettant aux membres de réserver des séances d'activités sportives
@@ -22,47 +21,42 @@ MCD:
 
 ![Symfony](https://img.shields.io/badge/Symfony-7-000000?logo=symfony)
 ![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4?logo=php&logoColor=white)
-![Statut](https://img.shields.io/badge/statut-en%20cours-orange)
+![Issues ouvertes](https://img.shields.io/github/issues/BarbereauM/ReservationApp?label=%C3%A9tapes%20restantes)
+![Issues fermées](https://img.shields.io/github/issues-closed/BarbereauM/ReservationApp?label=%C3%A9tapes%20termin%C3%A9es)
 
 ---
 
-## 📊 Avancement global
+## 📋 Suivi de l'avancement
 
-| # | Étape | Statut |
-|:-:|---|:-:|
-| 0 | Mise en place du projet | ⬜ À faire |
-| 1 | Conception (MCD / MLD) | ⬜ À faire |
-| 2 | Gestion des utilisateurs | ⬜ À faire |
-| 3 | Gestion des activités | ⬜ À faire |
-| 4 | Réservation de créneaux | ⬜ À faire |
-| 5 | Gestion des entraîneurs | ⬜ À faire |
-| 6 | Notifications par email | ⬜ À faire |
-| 7 | Statistiques et suivi | ⬜ À faire |
-| 8 | Tests, finitions et livraison | ⬜ À faire |
+Le détail de chaque étape (avec les tâches à cocher) se trouve dans les Issues.
+Le statut se met à jour tout seul : **open** = en cours, **closed** = terminée.
 
-<sub>Légende : ⬜ À faire · 🟨 En cours · ✅ Terminé</sub>
+| # | Étape | Issue | Statut |
+|:-:|---|:-:|:-:|
+| 0 | Mise en place du projet | [#1](https://github.com/BarbereauM/ReservationApp/issues/1) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/1?label=) |
+| 1 | Conception (MCD / MLD) | [#2](https://github.com/BarbereauM/ReservationApp/issues/2) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/2?label=) |
+| 2 | Gestion des utilisateurs | [#3](https://github.com/BarbereauM/ReservationApp/issues/3) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/3?label=) |
+| 3 | Gestion des activités | [#4](https://github.com/BarbereauM/ReservationApp/issues/4) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/4?label=) |
+| 4 | Réservation de créneaux | [#5](https://github.com/BarbereauM/ReservationApp/issues/5) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/5?label=) |
+| 5 | Gestion des entraîneurs | [#6](https://github.com/BarbereauM/ReservationApp/issues/6) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/6?label=) |
+| 6 | Notifications par email | [#7](https://github.com/BarbereauM/ReservationApp/issues/7) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/7?label=) |
+| 7 | Statistiques et suivi | [#8](https://github.com/BarbereauM/ReservationApp/issues/8) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/8?label=) |
+| 8 | Tests, finitions et livraison | [#9](https://github.com/BarbereauM/ReservationApp/issues/9) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/9?label=) |
+
+👉 [Voir toutes les Issues](https://github.com/BarbereauM/ReservationApp/issues?q=is%3Aissue)
 
 ---
 
-## 0. Mise en place du projet
+## ✨ Fonctionnalités
 
-- [ ] Créer le projet : `symfony new centre-sportif --version="7.3.*" --webapp`
-- [ ] Créer le dépôt GitHub et faire le premier commit
-- [ ] Configurer `.env.local` (base de données, `MAILER_DSN`, `MAILER_FROM`)
-- [ ] Installer les extensions Twig : `composer require twig/intl-extra twig/string-extra`
-- [ ] Créer la base : `php bin/console doctrine:database:create`
-- [ ] Mettre en place le template de base (`base.html.twig` + Bootstrap 5 + menu)
-- [ ] Installer un outil de test des emails (Mailpit ou MailHog)
-
-## 1. Conception
-
-- [ ] Rédiger le dictionnaire de données
-- [ ] Réaliser le MCD (entités, associations, cardinalités)
-- [ ] Déduire le MLD
-- [ ] Valider le modèle avec le formateur
+| Rôle | Ce qu'il peut faire |
+|---|---|
+| **Membre** | S'inscrire, se connecter, filtrer les activités, réserver / annuler une séance, consulter son historique |
+| **Entraîneur** | Consulter son planning, voir les inscrits, modifier ou annuler ses séances |
+| **Administrateur** | Gérer les activités, les séances et les entraîneurs, envoyer des emails groupés, consulter les statistiques |
 
 <details>
-<summary>📐 Voir le MCD / MLD</summary>
+<summary>📐 Modèle de données (MCD / MLD)</summary>
 
 ```mermaid
 erDiagram
@@ -128,116 +122,13 @@ erDiagram
 
 </details>
 
-## 2. Gestion des utilisateurs (membres)
-
-**Modèle**
-- [ ] Entité `User` (email, mot de passe, nom, prénom, téléphone, rôles, date d'inscription)
-- [ ] Migration et création de la table
-
-**Authentification (Security de Symfony)**
-- [ ] Configurer `security.yaml` (provider, firewall, `form_login`, `logout`)
-- [ ] Définir la hiérarchie des rôles : `ROLE_MEMBRE` < `ROLE_COACH` < `ROLE_ADMIN`
-- [ ] Page d'inscription (`/inscription`) avec mot de passe haché
-- [ ] Page de connexion / déconnexion (`/connexion`, `/deconnexion`)
-- [ ] Protéger les routes (`access_control` + `#[IsGranted]`)
-- [ ] Créer le premier compte administrateur
-
-**Profil**
-- [ ] Page profil : affichage des informations personnelles
-- [ ] Formulaire de modification du profil
-- [ ] Historique des réservations (à venir / passées / annulées)
-
-## 3. Gestion des activités
-
-**Modèle**
-- [ ] Entité `Activite` (nom, description, type, niveau, capacité max, prix, durée)
-- [ ] Entité `Seance` (début, fin, capacité, statut) liée à une activité
-- [ ] Relation activité ↔ entraîneurs (ManyToMany)
-
-**Administration**
-- [ ] Liste des activités (admin)
-- [ ] Créer une activité
-- [ ] Modifier une activité
-- [ ] Supprimer une activité (avec confirmation + CSRF)
-- [ ] Associer un ou plusieurs entraîneurs à une activité
-- [ ] Définir le calendrier : ajouter / modifier les séances d'une activité
-
-**Côté membre**
-- [ ] Catalogue des activités disponibles
-- [ ] Filtre par type d'activité
-- [ ] Filtre par niveau de difficulté
-- [ ] Filtre par date
-- [ ] Page détail d'une activité avec ses créneaux à venir
-
-## 4. Réservation de créneaux
-
-- [ ] Entité `Reservation` (membre, séance, date, statut)
-- [ ] Afficher les créneaux disponibles et les places restantes
-- [ ] Bouton « Réserver » (membre connecté uniquement)
-- [ ] Empêcher la double réservation d'une même séance
-- [ ] Empêcher la réservation d'une séance complète, passée ou annulée
-- [ ] Gérer l'accès concurrent à la dernière place (verrou en base)
-- [ ] Annulation d'une réservation par le membre
-- [ ] Mise à jour des places en temps réel (route `/api/places` + rafraîchissement JS)
-- [ ] *(Bonus)* Temps réel par push avec Mercure / Turbo Streams
-
-## 5. Gestion des entraîneurs
-
-**Administration**
-- [ ] Entité `Entraineur` (spécialité, biographie) liée à un `User`
-- [ ] Liste des entraîneurs
-- [ ] Ajouter un entraîneur (création du compte + rôle `ROLE_COACH`)
-- [ ] Modifier un entraîneur
-- [ ] Supprimer un entraîneur
-
-**Espace entraîneur**
-- [ ] Page « Mon planning » (séances à venir)
-- [ ] Liste des inscrits d'une séance
-- [ ] Modifier une de ses séances
-- [ ] Annuler une de ses séances (avec motif)
-- [ ] Voter : un entraîneur ne peut gérer que **ses** séances
-
-## 6. Notifications par email
-
-- [ ] Configurer Symfony Mailer
-- [ ] Service `NotificationMailer` + template email commun
-- [ ] Email de confirmation de réservation
-- [ ] Email d'annulation de réservation
-- [ ] Email d'annulation de séance (à tous les inscrits)
-- [ ] Email de rappel avant la séance (commande `app:rappels`)
-- [ ] Planifier la commande de rappel (cron toutes les heures)
-- [ ] Page admin d'envoi d'emails groupés (tous les membres ou membres d'une activité)
-- [ ] *(Bonus)* Envoi asynchrone avec Messenger
-
-## 7. Statistiques et suivi des activités
-
-- [ ] Tableau de bord admin
-- [ ] Nombre total de réservations
-- [ ] Réservations par activité
-- [ ] Réservations par mois (graphique)
-- [ ] Répartition par type d'activité (graphique)
-- [ ] Activités les plus populaires
-- [ ] Taux d'occupation des créneaux
-- [ ] Filtre par année
-
-## 8. Tests, finitions et livraison
-
-- [ ] Jeu de données de test (fixtures : admin, entraîneurs, membres, activités, séances)
-- [ ] Tester chaque rôle (membre, entraîneur, admin)
-- [ ] Vérifier la sécurité (accès interdits, CSRF, mots de passe hachés)
-- [ ] Vérifier l'affichage mobile
-- [ ] Tests unitaires / fonctionnels (PHPUnit)
-- [ ] Rédiger la documentation d'installation
-- [ ] Captures d'écran dans le README
-- [ ] Préparer la présentation / démonstration
-
 ---
 
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/<utilisateur>/<depot>.git
-cd <depot>
+git clone https://github.com/BarbereauM/ReservationApp.git
+cd DEPOT
 composer install
 # Créer .env.local à partir de .env (DATABASE_URL, MAILER_DSN, MAILER_FROM)
 php bin/console doctrine:database:create
