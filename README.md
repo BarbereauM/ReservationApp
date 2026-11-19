@@ -11,7 +11,9 @@ https://192.168.105.108/adminer.php<br>
 sardsql (id, mdp)
 <br>
 MCD:
-<img width="1150" height="908" alt="image" src="https://github.com/user-attachments/assets/813373ad-a142-40cf-99ff-f45069bb06ee" />
+<img width="791" height="630" alt="image" src="https://github.com/user-attachments/assets/70bd0812-dbc3-4b24-bbef-73db0f18655d" />
+
+
 
 # 🏅 Centre sportif — Système de réservation
 
