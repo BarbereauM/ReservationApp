@@ -1,7 +1,7 @@
 # ReservationApp
 Application de réservation de séances sportifs
 
-Link: http://192.168.105.108:8000/ReservApp/public/
+Link: http://192.168.105.108:8000/inscription/
 
 PHP 8.4.26
 Symfony CLI 5.22.2
