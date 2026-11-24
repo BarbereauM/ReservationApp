@@ -30,6 +30,7 @@ class InscriptionType extends AbstractType
                     'Utilisateur' => 'ROLE_USER',
                 ],
             ]);
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

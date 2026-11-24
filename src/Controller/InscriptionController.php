@@ -9,6 +9,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\HttpFoundation\Request;
+use App\Form\InscriptionType;
 
 final class InscriptionController extends AbstractController
 {
@@ -32,6 +37,11 @@ final class InscriptionController extends AbstractController
         {
             $this->addFlash('error', 'NOK !');
         }
+
+    public function index(Request $request): Response
+    {
+        $form = $this->createForm(InscriptionType::class);
+        $form->handleRequest($request);
 
         return $this->render('inscription/index.html.twig', [
             'controller_name' => 'InscriptionController',
