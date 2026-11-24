@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Utilisateur;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
@@ -16,11 +17,19 @@ class InscriptionType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            ->add('id_utilisateur', TextType::class)
             ->add('email', EmailType::class)
             ->add('mot_de_passe', PasswordType::class)
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
             ->add('telephone', TextType::class)
+            ->add('role', ChoiceType::class, [
+                'choices' => [
+                    'Administrateur' => 'ROLE_ADMIN',
+                    'Entraineur' => 'ROLE_COACH',
+                    'Utilisateur' => 'ROLE_USER',
+                ],
+            ]);
         ;
     }
 

@@ -18,5 +18,28 @@
         {{ form_widget(form) }}
         <button type="submit">S'inscrire</button>
     {{ form_end(form) }}
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-info">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {% for message in app.flashes('error') %}
+        <div class="alert alert-info">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+</div>
+<div id="platine" class="platine" data-turbo-permanent aria-hidden="true"
+     data-pochettes="{{ [
+         asset('images/vinyles/vinyle1.jpg'),
+         asset('images/vinyles/vinyle2.jpg'),
+         asset('images/vinyles/vinyle3.jpg'),
+     ]|json_encode|e('html_attr') }}">
+    <div class="disque">
+        <div class="etiquette"></div>
+    </div>
 </div>
 {% endblock %}
