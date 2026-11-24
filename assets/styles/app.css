@@ -1,3 +1,88 @@
+html {
+    background: radial-gradient(circle, #222 0%, #000 70%);
+    min-height: 100%;
+}
+
 body {
-    background-color: skyblue;
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+/* La platine : centrée en fond, derrière tout le reste */
+.platine {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 90vmin;
+    height: 90vmin;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Le disque : sillons + reflet, il tourne en continu */
+.disque {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        conic-gradient(from 0deg, transparent 0deg, rgba(255, 255, 255, 0.12) 30deg, transparent 60deg,
+                       transparent 180deg, rgba(255, 255, 255, 0.12) 210deg, transparent 240deg),
+        repeating-radial-gradient(circle, #111 0 2px, #1c1c1c 2px 4px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    animation: vinyle 1.8s linear infinite;
+}
+
+/* L'étiquette : l'image tirée au hasard + le trou central */
+.etiquette {
+    width: 38%;
+    height: 38%;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, #000 0 4%, transparent 4.5%),
+        var(--pochette) center / cover;
+    filter: brightness(0.7);
+}
+
+@keyframes vinyle {
+    to { transform: rotate(360deg); }
+}
+
+/* Changement de disque : l'ancien part à gauche, le nouveau arrive par la droite */
+.platine.sortie {
+    animation: sortie 0.7s ease-in forwards;
+}
+
+.platine.entree {
+    animation: entree 0.7s ease-out;
+}
+
+@keyframes sortie {
+    to { transform: translateX(-120vw); }
+}
+
+@keyframes entree {
+    from { transform: translateX(120vw); }
+    to   { transform: translateX(0); }
+}
+
+/* Glow RGB sur les textes */
+h1, h2, label, .alert, button {
+    color: white;
+    animation: rgb-glow 4s linear infinite;
+}
+
+@keyframes rgb-glow {
+    0%, 100% { text-shadow: 0 0 4px #fff, 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000; }
+    33%      { text-shadow: 0 0 4px #fff, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00; }
+    66%      { text-shadow: 0 0 4px #fff, 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 40px #0000ff; }
+}
+
+/* Coupe les animations pour ceux qui les ont désactivées dans leur système */
+@media (prefers-reduced-motion: reduce) {
+    .disque, .platine,
+    h1, h2, label, .alert, button { animation: none; }
 }

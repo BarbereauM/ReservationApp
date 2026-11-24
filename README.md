@@ -35,15 +35,15 @@ Le statut se met à jour tout seul : **open** = en cours, **closed** = terminée
 
 | # | Étape | Issue | Statut |
 |:-:|---|:-:|:-:|
-| 0 | Mise en place du projet | [#1](https://github.com/BarbereauM/ReservationApp/issues/3) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/3?label=) |
-| 1 | Conception (MCD / MLD) | [#2](https://github.com/BarbereauM/ReservationApp/issues/4) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/4?label=) |
-| 2 | Gestion des utilisateurs | [#3](https://github.com/BarbereauM/ReservationApp/issues/5) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/5?label=) |
-| 3 | Gestion des activités | [#4](https://github.com/BarbereauM/ReservationApp/issues/6) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/6?label=) |
-| 4 | Réservation de créneaux | [#5](https://github.com/BarbereauM/ReservationApp/issues/7) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/7?label=) |
-| 5 | Gestion des entraîneurs | [#6](https://github.com/BarbereauM/ReservationApp/issues/8) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/8?label=) |
-| 6 | Notifications par email | [#7](https://github.com/BarbereauM/ReservationApp/issues/9) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/9?label=) |
-| 7 | Statistiques et suivi | [#8](https://github.com/BarbereauM/ReservationApp/issues/10) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/10?label=) |
-| 8 | Tests, finitions et livraison | [#9](https://github.com/BarbereauM/ReservationApp/issues/11) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/11?label=) |
+| 0 | Mise en place du projet | [#1](https://github.com/BarbereauM/ReservationApp/issues/4) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/4?label=) |
+| 1 | Conception (MCD / MLD) | [#2](https://github.com/BarbereauM/ReservationApp/issues/5) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/5?label=) |
+| 2 | Gestion des utilisateurs | [#3](https://github.com/BarbereauM/ReservationApp/issues/6) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/6?label=) |
+| 3 | Gestion des activités | [#4](https://github.com/BarbereauM/ReservationApp/issues/7) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/7?label=) |
+| 4 | Réservation de créneaux | [#5](https://github.com/BarbereauM/ReservationApp/issues/8) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/8?label=) |
+| 5 | Gestion des entraîneurs | [#6](https://github.com/BarbereauM/ReservationApp/issues/9) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/9?label=) |
+| 6 | Notifications par email | [#7](https://github.com/BarbereauM/ReservationApp/issues/10) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/10?label=) |
+| 7 | Statistiques et suivi | [#8](https://github.com/BarbereauM/ReservationApp/issues/11) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/11?label=) |
+| 8 | Tests, finitions et livraison | [#9](https://github.com/BarbereauM/ReservationApp/issues/12) | ![](https://img.shields.io/github/issues/detail/state/BarbereauM/ReservationApp/12?label=) |
 
 👉 [Voir toutes les Issues](https://github.com/BarbereauM/ReservationApp/issues?q=is%3Aissue)
 
